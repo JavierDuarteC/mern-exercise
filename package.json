@@ -1,0 +1,19 @@
+{
+  "name": "mern-exercise",
+  "version": "1.0.0",
+  "description": "MongoDB,Express,React,Node exercise - LEARNING",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierDuarteC/mern-exercise.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JavierDuarteC/mern-exercise/issues"
+  },
+  "homepage": "https://github.com/JavierDuarteC/mern-exercise#readme"
+}
