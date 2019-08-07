@@ -1,4 +1,4 @@
-version: 2
+version: "2"
 
 services:
   mongodb:
@@ -11,7 +11,7 @@ services:
     ports: 
       - "5000:5000"
     volumes:
-      - ./backend: /usr/src/app
+      - ./backend:/usr/src/app
     depends_on: 
       - mongodb
   
@@ -20,6 +20,6 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend: /usr/src/app
+      - ./frontend:/usr/src/app
     depends_on: 
       - backend
