@@ -10,7 +10,7 @@ const port = 5000
 app.use(cors())
 app.use(express.json())
 
-const uri = 'mongodb://mongo:27017/mern_exercise'
+const uri = 'mongodb://mongodb:27017/mern_exercise'
 mongoose.connect(uri, {
     useNewUrlParser: true, useCreateIndex: true
 })
