@@ -29,7 +29,7 @@ export default class ExerciseList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://backend:5000/exercises/')
+        axios.get('http://localhost:5000/exercises/')
             .then(res => {
                 this.setState({
                     exercises: res.data
@@ -39,7 +39,7 @@ export default class ExerciseList extends Component {
     }
 
     deleteExercise(id) {
-        axios.delete('http://backend:5000/exercises/' + id)
+        axios.delete('http://localhost:5000/exercises/' + id)
             .then(res => {
                 console.log(res.data)
 

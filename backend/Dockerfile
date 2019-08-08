@@ -16,7 +16,7 @@ COPY . .
 
 RUN npm install -g nodemon
 
-EXPOSE 5000
+EXPOSE 3000
 
 CMD [ "nodemon", "server" ]
 
