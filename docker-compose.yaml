@@ -3,16 +3,22 @@ version: "2"
 services:
   mongodb:
     image: "mongo"
+    expose:
+      - '27017'
     ports:
-      - "27017:27017"
+      - '27017:27017'
 
   backend:
     build:  ./backend/
+    expose:
+      - '5000'
     ports: 
       - "5000:5000"
     volumes:
-      - ./backend:/usr/src/app
+      - ./backend:/app
     depends_on: 
+      - mongodb
+    links:
       - mongodb
   
   frontend:
@@ -20,6 +26,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/usr/src/app
+      - ./frontend:/app
     depends_on: 
+      - backend
+    links:
       - backend
