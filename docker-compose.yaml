@@ -10,19 +10,19 @@ services:
   backend:
     container_name: backend
     build:  ./backend/
+    volumes:
+      - ./backend:/usr/src/app
     ports: 
       - "5000:5000"
     depends_on: 
-      - mongodb
-    links:
       - mongodb
   
   frontend:
     container_name: frontend
     build: ./frontend/
+    volumes:
+      - ./frontend:/usr/src/app
     ports:
       - "3000:3000"
     depends_on: 
-      - backend
-    links:
       - backend

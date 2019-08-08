@@ -15,7 +15,8 @@ RUN npm install
 COPY . .
 
 RUN npm install -g nodemon
+RUN npm install -g react-scripts
 
 EXPOSE 3000
 
-CMD [ "nodemon", "index" ]
+CMD [ "npm", "start" ]
